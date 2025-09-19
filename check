@@ -24,7 +24,7 @@ run_pytest() {
     else
         pytest .python/test_.py --junitxml=.python/pytest_results.xml > /dev/null 2>&1
     fi
-    PYTEST_RESULT=$(python .python/get_pytest_score.py .python/pytest_results.xml)
+    PYTEST_RESULT=$(python .python/get_pytest_score.py .python/pytest_results.xml | cut -d',' -f1)
     PYTEST_RESULT_INT=$(echo "$PYTEST_RESULT * 100" | bc)
     echo "Pytest score: $PYTEST_RESULT_INT/100"
 }
