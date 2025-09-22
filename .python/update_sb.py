@@ -12,7 +12,7 @@ def main(pytest_score, pytest_string, pylint_score):
     github_actor = os.environ['GITHUB_ACTOR']
     github_repository = os.environ['GITHUB_REPOSITORY']
 
-    supabase_url = os.environ['SUPABASE_URL']
+    supabase_url = os.environ['SUPABASE_URL'].strip()
     supabase_key = os.environ['SUPABASE_KEY']
     supabase_table = os.environ.get('SUPABASE_TABLE', 'marks')  # default to 'ci_data'
 
@@ -20,6 +20,7 @@ def main(pytest_score, pytest_string, pylint_score):
     print(f"{github_run_number=}")
     print(f"{github_actor=}")
     print(f"{github_repository=}")
+    print(f"{supabase_url=})
 
     data = {
         'actor': github_actor,
