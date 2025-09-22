@@ -1,5 +1,5 @@
 
-#### Fonction secondaire
+#### Fonction secondaire isprime()
 
 
 """
