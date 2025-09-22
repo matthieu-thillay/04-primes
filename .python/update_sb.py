@@ -20,7 +20,7 @@ def main(pytest_score, pytest_string, pylint_score):
     print(f"{github_run_number=}")
     print(f"{github_actor=}")
     print(f"{github_repository=}")
-    print(f"{supabase_url=})
+    print(f"{supabase_url=}")
 
     data = {
         'actor': github_actor,
